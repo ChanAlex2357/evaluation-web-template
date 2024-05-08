@@ -7,67 +7,66 @@
 
 ## Authentification
 
-- [ ]  authentification
-    - [ ]  Model
-        - [ ]  User ( id_user , nom , prenoms , date_naissance , genre , mail , password )
-            - [ ]  nom et prenoms : pas de chiffre ( regexp )
-            - [ ]  date_naissance : 18+
-            - [ ]  genre : M ou F
-            - [ ]  mail : validation mail ( regexp )
-            - [ ]  password : 8 characters , chiffres , lettres , characters specials ( regexp )
-            - [ ]  CRUD ( user )
-            - [ ]  getUserAuthentification [ recuperer l’user par son mail et mot de passe ]
-        - [ ]  UserProfil ( id_user , id_profil )
+- [ ]  Model
+    - [ ]  User ( id_user , nom , prenoms , date_naissance , genre , mail , password )
+        - [ ]  nom et prenoms : pas de chiffre ( regexp )
+        - [ ]  date_naissance : 18+
+        - [ ]  genre : M ou F
+        - [ ]  mail : validation mail ( regexp )
+        - [ ]  password : 8 characters , chiffres , lettres , characters specials ( regexp )
+        - [ ]  CRUD ( user )
+        - [ ]  getUserAuthentification [ recuperer l’user par son mail et mot de passe ]
+    - [ ]  UserProfil ( id_user , id_profil )
+        - [ ]  CRUD ( admin )
+        - [ ]  Profil ( id_profil , profil )
             - [ ]  CRUD ( admin )
-            - [ ]  Profil ( id_profil , profil )
-                - [ ]  CRUD ( admin )
-    - [ ]  Views
-        - [ ]  login.php
-            - [ ]  formulaire ( mail , password )
-            - [ ]  message erreur
-                - [ ]  mot de passe incorecte mail invalide
-            - [ ]  validation ⇒ ajax ( checkUser )
-        - [ ]  signup.php
-            - [ ]  formulaire ( user )
-                - [ ]  nom et prenoms : text , required
-                - [ ]  date_naissance : date , required
-                - [ ]  genre : radio button(M/F) , required
-                - [ ]  mail : mail , required
-                - [ ]  password : password,required
-            - [ ]  messages d’erreurs
-            - [ ]  validation  ⇒ ajax ( createUser )
-        - [ ]  Home
-            - [ ]  home-template.php
-                - [ ]  header
-                - [ ]  content [ change selon le profil ]
-                - [ ]  footer
-    - [ ]  Controllers
-        - [ ]  Login
-            - [ ]  index ⇒ login.php
-            - [ ]  checkUser ⇒ getUserAuthentification
-                - [ ]  si user existe
-                    - [ ]  Session [  id_user ]
-                    - [ ]  redirection accueil.php selon profil
-                - [ ]  sinon retour login.php
-                    - [ ]  avec champ pre rempli
-                    - [ ]  message d’erreur
-        - [ ]  SignUp
-            - [ ]  index () ⇒ signup.php
-            - [ ]  createUser () ⇒
-                - [ ]  validation des donnees
-                - [ ]  si valide
-                    - [ ]  insertion user
-                    - [ ]  redirection login.php
-                - [ ]  sinon
-                    - [ ]  message d’erreurs
-                    - [ ]  retour signup.php avec champs pre rempli
-        - [ ]  Home
-            - [ ]  index ( )
-                - [ ]  profil(admin,manager,team lead,tsotra)
-                - [ ]  redirection selon profil
-            - [ ]  admin ( )
-                - [ ]  protection de pages( front-office et back-office )
-            - [ ]  user ( )
-                - [ ]  protection de pages( front-office et back-office )
-            - [ ]  manager ( )
-                - [ ]  protection de pages( front-office et back-office )
+- [ ]  Views
+    - [ ]  login.php
+        - [ ]  formulaire ( mail , password )
+        - [ ]  message erreur
+            - [ ]  mot de passe incorecte mail invalide
+        - [ ]  validation ⇒ ajax ( checkUser )
+    - [ ]  signup.php
+        - [ ]  formulaire ( user )
+            - [ ]  nom et prenoms : text , required
+            - [ ]  date_naissance : date , required
+            - [ ]  genre : radio button(M/F) , required
+            - [ ]  mail : mail , required
+            - [ ]  password : password,required
+        - [ ]  messages d’erreurs
+        - [ ]  validation  ⇒ ajax ( createUser )
+    - [ ]  Home
+        - [ ]  home-template.php
+            - [ ]  header
+            - [ ]  content [ change selon le profil ]
+            - [ ]  footer
+- [ ]  Controllers
+    - [ ]  Login
+        - [ ]  index ⇒ login.php
+        - [ ]  checkUser ⇒ getUserAuthentification
+            - [ ]  si user existe
+                - [ ]  Session [  id_user ]
+                - [ ]  redirection accueil.php selon profil
+            - [ ]  sinon retour login.php
+                - [ ]  avec champ pre rempli
+                - [ ]  message d’erreur
+    - [ ]  SignUp
+        - [ ]  index () ⇒ signup.php
+        - [ ]  createUser () ⇒
+            - [ ]  validation des donnees
+            - [ ]  si valide
+                - [ ]  insertion user
+                - [ ]  redirection login.php
+            - [ ]  sinon
+                - [ ]  message d’erreurs
+                - [ ]  retour signup.php avec champs pre rempli
+    - [ ]  Home
+        - [ ]  index ( )
+            - [ ]  profil(admin,manager,team lead,tsotra)
+            - [ ]  redirection selon profil
+        - [ ]  admin ( )
+            - [ ]  protection de pages( front-office et back-office )
+        - [ ]  user ( )
+            - [ ]  protection de pages( front-office et back-office )
+        - [ ]  manager ( )
+            - [ ]  protection de pages( front-office et back-office )
