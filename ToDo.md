@@ -1,8 +1,12 @@
 # Realisation
 
+- [x] Creation depot github
+    - [x] new repositories
+    - [x] add collaborators ( tahinaBemax )
+    - [x] initialisation codeIgniter du projet
+
 ## Authentification
 
-- [ ]  Creation depot github
 - [ ]  authentification
     - [ ]  Model
         - [ ]  User ( id_user , nom , prenoms , date_naissance , genre , mail , password )
